@@ -1,0 +1,228 @@
+:root {
+  --white:#ebe9dc;
+  --gray: #a1a1a1;
+  --black: #090706;
+  /* --yellow: #eacb29; */
+  --yellow: #eaca29b0;
+  /* --purple: #c279be; */
+  --purple: #c279beb0;
+  --brown: #986443;
+  --brownb: #5c4b3f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+  font-family: 'Open Sans',sans-serif;
+  background-color: var(--white);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+img {
+  max-width: 100%;
+}
+/* BACKGROUND */
+.bg-yellow {
+  background-color: var(--yellow);
+}
+.bg-purple {
+  background-color: var(--purple);
+}
+.bg-black {
+  background-color: var(--black);
+  color: var(--white);
+}
+/* TEXTOS */
+.text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.text-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text-between span {
+  display: inline-flex;
+  justify-content: flex-end;
+}
+.text-right span {
+  display: initial;
+}
+.text-purple {
+  color: #db88d7;;
+}
+.text-number {
+  font-size: 1.7em;
+}
+/* Estilos para cuadros */
+.radius-all {
+  border-radius: 50%;
+}
+.radius-line1 {
+  border-radius:0 50% 0 50%;
+}
+.radius-line2 {
+  --sz:25%;
+  border-radius:var(--sz) 0 var(--sz) 0;
+}
+
+.radius-tr {
+  border-radius:0 50% 0 0;
+}
+.radius-tl {
+  border-radius:50% 0 0 0;
+}
+.radius-br {
+  border-radius:0 0 50% 0;
+}
+.radius-bl {
+  border-radius:0 0 0 50%;
+}
+
+
+.bold {
+  font-weight: 700;
+}
+/* font-family: 'Open Sans', sans-serif; */
+
+/* H1 */
+.h1 {
+  font-size: 3em;
+  margin-bottom: 1.2rem;
+  display: flex;
+}
+.h1>div {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 1em;
+}
+.h1 img {
+  width: 95px;
+  transform:translate(-100%,0) rotate(40deg);
+}
+
+
+/* MENU */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 0 4rem;
+}
+.logo img {
+  width:40px;
+}
+.login img {
+  width: 18px;
+}
+.login a:hover {
+  text-decoration: underline;
+}
+.g-2 {
+  display: grid;
+  grid-gap: .5em;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+/* MAIN-DESC */
+.main-desc{
+  padding: 0 1em 0 0;
+}
+/* HERO */
+.hero {
+  text-align: center;
+}
+.hero img {
+  max-width: 550px;
+}
+/* GET */
+.get {
+  display: flex;
+  align-items: center;
+}
+.get>.desc {
+  flex: 1;
+}
+.desc>p {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+
+/* button */
+.button {
+  display: inline-block;
+  background-color: var(--black);
+  color: white;
+  padding: .8em .8em;
+  border: 2px solid var(--black);
+  cursor: pointer;
+  transition: color .3s linear, background .3s linear;
+}
+.button:hover {
+  color:var(--black);
+  background-color: var(--white);
+}
+
+/* GRID PRINCIPAL  */
+.main-grid {
+  padding: 1.2em;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-gap: 1.8em;
+}
+
+/* PANEL  */
+.panel {
+  --ancho:190px;
+  display: grid;
+  grid-template-columns: repeat(3,var(--ancho));
+  grid-template-rows:repeat(4,var(--ancho));
+  position: relative;
+}
+/* COCO */
+.coco {
+  z-index: -100;
+  --wi:calc(var(--ancho)/4);
+  position: absolute;
+  width: var(--wi);
+  height: var(--wi);
+  background-color: red;
+  top: calc(var(--wi)*6 + var(--wi)*1.5);
+  left: calc(var(--wi)*6 + var(--wi)*1.5);
+  background-image:radial-gradient(var(--wi) at 0 0,var(--white) 50%, transparent 50%), radial-gradient( var(--wi) at 100% 100%, var(--white) 50%, transparent 50%), radial-gradient( var(--wi) at 100% 0%, var(--white) 50%, transparent 50%), radial-gradient( var(--wi) at 0% 100%, var(--white) 50%, var(--black) 50%);
+}
+.panel>div {
+  padding: .6em .5em .6em .8em;
+}
+.panel-img1-1 {
+  background-image: url('./../multimedia/1.jpg');
+  background-position: center left;
+  background-size: 200%;
+}
+.panel-img1-2 {
+  background-image: url('./../multimedia/1.jpg');
+  background-position: center right;
+  background-size: 200%;
+}
+.panel-img2 {
+  background-image: url('./../multimedia/3.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+.panel-img3 {
+  background-image: url('./../multimedia/2.jpg');
+  background-position: center center;
+  background-size: cover;
+}
